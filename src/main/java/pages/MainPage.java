@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.WaitElement;
 
 public class MainPage {
-    private WebDriver driver;
+    WebDriver driver;
 
     @FindBy(xpath = "//div[@class = 'Hq']//button[@class = 'Kq Lq']")
     private WebElement agreeWithCityButton;
@@ -32,8 +33,8 @@ public class MainPage {
         return this;
     }
 
-    public MainPage clickSearchButton() {
-        WaitElement.waitToBeClickable(driver, searchButton).click();
+    public MainPage pressEnterButton() {
+        productSearchField.sendKeys(Keys.ENTER);
         return this;
     }
 

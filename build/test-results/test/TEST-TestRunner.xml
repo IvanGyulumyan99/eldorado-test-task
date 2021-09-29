@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-09-29T10:04:42" hostname="DESKTOP-88QKCJD" time="40.976">
+  <properties/>
+  <testcase name="Add item to basket and delete it" classname="TestRunner" time="40.976"/>
+  <system-out><![CDATA[
+Scenario: Add item to basket and delete it                     ?[90m# src/test/resources/features/basket.feature:3?[0m
+  ?[32mGiven ?[0m?[32mOpen the Eldorado main page ?[0m?[32m?[1m"https://www.eldorado.ru/"?[0m ?[90m# stepsDefinitions.MyStepdefs.openTheEldoradoMainPage(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mClick on agree with city button?[0m                          ?[90m# stepsDefinitions.MyStepdefs.clickOnAgreeWithCityButton()?[0m
+  ?[32mAnd ?[0m?[32mEnter search parameter ?[0m?[32m?[1m"Iphone"?[0m                          ?[90m# stepsDefinitions.MyStepdefs.enterSearchParameter(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mPress enter button?[0m                                       ?[90m# stepsDefinitions.MyStepdefs.pressEnterButton()?[0m
+  ?[32mWhen ?[0m?[32mRemember first found items vendor code and name?[0m         ?[90m# stepsDefinitions.MyStepdefs.rememberFirstFoundItemsVendorCodeAndName()?[0m
+  ?[32mAnd ?[0m?[32mAdd first item to the basket?[0m                             ?[90m# stepsDefinitions.MyStepdefs.addFirstItemToTheBasket()?[0m
+  ?[32mAnd ?[0m?[32mClick on basket button?[0m                                   ?[90m# stepsDefinitions.MyStepdefs.clickOnBasketButton()?[0m
+  ?[32mThen ?[0m?[32mCheck that the item was added to the basket?[0m             ?[90m# stepsDefinitions.MyStepdefs.checkThatTheItemWasAddedToTheBasket()?[0m
+  ?[32mGiven ?[0m?[32mRemove item from the basket?[0m                            ?[90m# stepsDefinitions.MyStepdefs.removeItemFromTheBasket()?[0m
+  ?[32mThen ?[0m?[32mItem successfully removed from the basket?[0m               ?[90m# stepsDefinitions.MyStepdefs.itemSuccessfullyRemovedFromTheBasket()?[0m
+
+1 Scenarios (?[32m1 passed?[0m)
+10 Steps (?[32m10 passed?[0m)
+0m40.982s
+
+
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 93.0.4577.63 (ff5c0da2ec0adeaed5550e6c7e98417dac77d98a-refs/branch-heads/4577@{#1135}) on port 40002
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1632909883.948][WARNING]: This version of ChromeDriver has not been tested with Chrome version 94.
+Sep 29, 2021 1:04:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>

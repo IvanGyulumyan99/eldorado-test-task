@@ -1,7 +1,5 @@
 package utils;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,18 +16,19 @@ public abstract class BaseTest {
     protected SearchPage searchPage;
     protected BasketPage basketPage;
 
-    @BeforeEach
-    public void preCondition() {
+    public void openBrowser() {
         configureWebDriver();
-        driver.get("https://www.eldorado.ru/");
         mainPage = new MainPage(driver);
         searchPage = new SearchPage(driver);
         basketPage = new BasketPage(driver);
     }
 
-    @AfterEach
-    public void postCondition() {
+    public void closeBrowser() {
         driver.quit();
+    }
+
+    public void open(String url) {
+        driver.get(url);
     }
 
     private void configureWebDriver() {
@@ -38,6 +37,7 @@ public abstract class BaseTest {
         options.addArguments("--disable-notifications");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
 }

@@ -1,0 +1,10 @@
+pages/MainPage.java
+ pages.MainPage
+pages/BasketPage.java
+ pages.BasketPage
+utils/BaseTest.java
+ utils.BaseTest
+utils/WaitElement.java
+ utils.WaitElement
+pages/SearchPage.java
+ pages.SearchPage
